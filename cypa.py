@@ -45,11 +45,11 @@ def grid9():
 
 def grid8():
     grid8Visited = True
-    print("Grid eight")
+    
 
 def grid7():
     grid7Visited = True
-    print("Grid seven")
+    print("You fell off the edge, that was silly. You big silly goose. Also on the way down you're eaten by geese.\n")
 
 def grid6():
     grid6Visited = True
