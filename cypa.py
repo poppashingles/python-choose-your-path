@@ -7,25 +7,42 @@
 bottle = False
 shotgun = False
 
+# To check if grid squares have been visited already in order to change messages
+# if they are visited a second time
+grid1Visited = False
+grid2Visited = False
+grid3Visited = False
+grid4Visited = False
+grid5Visited = False
+grid6Visited = False
+grid7Visited = False
+grid8Visited = False
+grid9Visited = False
+
 #  Intro
 name = raw_input("What is your name? \n").strip().title()
 ans = raw_input("Hi Michelle! Yumana play some game? \n")
 
 #  Grid content
 def grid9():
+    grid9Visited = True
     ans9 = raw_input("""You finally, after literally minutes of this adventure, meet the wizard John McCaine spoke of back in grid number 6.
     It looks more like a tired old man with a scraggly beard than a wizard though.""")
 
 def grid8():
+    grid8Visited = True
     print("Grid eight")
 
 def grid7():
+    grid7Visited = True
     print("Grid seven")
 
 def grid6():
+    grid6Visited = True
     print("Grid six")
 
 def grid5():
+    grid5Visited = True
     ans5 = raw_input("""Hooray! A lack of bears. But you are in the sea (remember? it said earlier). That's not where bears live.
     You curse your damn fool self and take a look about.
     You take a look west. It's that ocelot again, singing away. He might have sweets in his pockets...
@@ -43,14 +60,17 @@ def grid5():
         grid8()
 
 def grid4():
+    grid4Visited = True
     print("""It sings ever so sweetly that you fall asleep and drown.
     That's possible apparently but you might be the first person it's happened to.
     Congratulations on a...I guess, interesting death. See you in Valhalla\n""")
 
 def grid3():
+    grid3Visited = True
     print("Argh! Bears! You're dead! (from bears)")
 
 def grid2():
+    grid2Visited = True
     ans2 = raw_input("""Anneka sees a fellow adventurer and decides to come along with you
     after a final scream at the seagulls about life insurance premiums.
     You've gained a new companion! She is the worst. North? Maybe bears. I'd try East?\n """)
@@ -60,6 +80,7 @@ def grid2():
         grid3()
 
 def grid1():
+    grid1Visited = True
     ans1 = raw_input("""You wake up in the sea, what the fuck happened there?!
     Just north of you there's a small golden ocelot hovering above the sea and
     singing a gentle lullaby about gentlemen and their ways.
