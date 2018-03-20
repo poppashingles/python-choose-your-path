@@ -3,22 +3,32 @@
 # 4 | 5 | 6
 # 1 | 2 | 3
 
+# Global variables for win conditions
+bottle = False
+shotgun = False
+
 #  Intro
 name = raw_input("What is your name? \n").strip().title()
 ans = raw_input("Hi Michelle! Yumana play some game? \n")
 
-
+#  Grid content
 def grid9():
-    print("You win I guess. There is no prize, please leave")
+    ans9 = raw_input("""You finally, after literally minutes of this adventure, meet the wizard John McCaine spoke of back in grid number 6.
+    It looks more like a tired old man with a scraggly beard than a wizard though.""")
 
-# def grid8():
+def grid8():
+    print("Grid eight")
 
-# def grid7():
+def grid7():
+    print("Grid seven")
 
-# def grid6():
+def grid6():
+    print("Grid six")
 
 def grid5():
-    ans5 = raw_input("""You take a look west. It's that ocelot again, singing away. He might have sweets in his pockets...
+    ans5 = raw_input("""Hooray! A lack of bears. But you are in the sea (remember? it said earlier). That's not where bears live.
+    You curse your damn fool self and take a look about.
+    You take a look west. It's that ocelot again, singing away. He might have sweets in his pockets...
     To your directly east, it couldn't be more easterly, John McCaine waits on a small island to show you how high he can't lift his arms.
     It's a bit sad, someone has put a silly hat on him and he can't take it off.
     Lastly you could head to the North. It's a distance away but you're pretty sure you can make out a small boat.
