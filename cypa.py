@@ -26,8 +26,22 @@ ans = raw_input("Hi Michelle! Yumana play some game? \n")
 #  Grid content
 def grid9():
     grid9Visited = True
-    ans9 = raw_input("""You finally, after literally minutes of this adventure, meet the wizard John McCaine spoke of back in grid number 6.
-    It looks more like a tired old man with a scraggly beard than a wizard though.""")
+    if bottle == True:
+        ans9 = raw_input("""You finally, after literally minutes of this adventure, meet the wizard that John McCaine mentioned back in grid 6.
+        It looks more like a tired old man with a scraggly beard than a wizard though.
+        Well, you have that broken bottle. Stab him with it? """)
+        if ans9.upper() == "YES":
+            print("""You've murdered a lost old man. Nice work. Why would he be a wizard?!
+            You had zero evidence of that. """)
+        elif ans9.upper() == "NO":
+            print("Well...yeah, obviously. Why would you murder an old man based on the word of a clearly insane John McCaine? You win!")
+    else:
+        ans9 = raw_input("""You meet an old dude, he's just kind of standing there...
+        Just leave? I guess? South or West are the only options here. """)
+        if ans9.upper() == "WEST":
+            grid8()
+        elif ans9.upper() == "SOUTH":
+            grid6()
 
 def grid8():
     grid8Visited = True
@@ -39,7 +53,20 @@ def grid7():
 
 def grid6():
     grid6Visited = True
-    print("Grid six")
+    ans6 = raw_input("""Bless his little cotton socks, it's a big point hat that says 'Oh I'm just the smelliest'.
+    Help him take it off or just laugh at his plight? Nobody will judge you, it's fine. Help or laugh? """)
+    if ans6.upper() == "HELP":
+        print("""You climb up onto the island and take the hat off of his head.
+        He looks you in the eye and says 'thank you for your help young'un' and presents you an item wrapped in cloth.
+        'Take this, it is a weapon of legend that will help you defeat the wizard who controls these lands'
+        You have acquired 'Broken bottle!' You swim off to the north.""")
+        bottle = True
+        grid9()
+    elif ans6.upper() == "LAUGH":
+        print("""He looks sad, which makes it funnier.
+        You swim off to the north, still giggling away. You sicken me.""")
+        grid9()
+
 
 def grid5():
     grid5Visited = True
