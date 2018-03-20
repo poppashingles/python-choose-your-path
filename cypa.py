@@ -60,6 +60,7 @@ def grid6():
         He looks you in the eye and says 'thank you for your help young'un' and presents you an item wrapped in cloth.
         'Take this, it is a weapon of legend that will help you defeat the wizard who controls these lands'
         You have acquired 'Broken bottle!' You swim off to the north.""")
+        global bottle
         bottle = True
         grid9()
     elif ans6.upper() == "LAUGH":
