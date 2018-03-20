@@ -29,15 +29,15 @@ def grid9():
     if bottle == True:
         ans9 = raw_input("""You finally, after literally minutes of this adventure, meet the wizard that John McCaine mentioned back in grid 6.
         It looks more like a tired old man with a scraggly beard than a wizard though.
-        Well, you have that broken bottle. Stab him with it? """)
+        Well, you have that broken bottle. Stab him with it?\n """)
         if ans9.upper() == "YES":
             print("""You've murdered a lost old man. Nice work. Why would he be a wizard?!
-            You had zero evidence of that. """)
+            You had zero evidence of that.\n """)
         elif ans9.upper() == "NO":
             print("Well...yeah, obviously. Why would you murder an old man based on the word of a clearly insane John McCaine? You win!")
     else:
         ans9 = raw_input("""You meet an old dude, he's just kind of standing there...
-        Just leave? I guess? South or West are the only options here. """)
+        Just leave? I guess? South or West are the only options here...\n """)
         if ans9.upper() == "WEST":
             grid8()
         elif ans9.upper() == "SOUTH":
@@ -54,18 +54,18 @@ def grid7():
 def grid6():
     grid6Visited = True
     ans6 = raw_input("""Bless his little cotton socks, it's a big point hat that says 'Oh I'm just the smelliest'.
-    Help him take it off or just laugh at his plight? Nobody will judge you, it's fine. Help or laugh? """)
+    Help him take it off or just laugh at his plight? Nobody will judge you, it's fine. Help or laugh?\n """)
     if ans6.upper() == "HELP":
         print("""You climb up onto the island and take the hat off of his head.
         He looks you in the eye and says 'thank you for your help young'un' and presents you an item wrapped in cloth.
         'Take this, it is a weapon of legend that will help you defeat the wizard who controls these lands'
-        You have acquired 'Broken bottle!' You swim off to the north.""")
+        You have acquired 'Broken bottle!' You swim off to the north\n """)
         global bottle
         bottle = True
         grid9()
     elif ans6.upper() == "LAUGH":
         print("""He looks sad, which makes it funnier.
-        You swim off to the north, still giggling away. You sicken me.""")
+        You swim off to the north, still giggling away. You sicken me\n """)
         grid9()
 
 
@@ -79,7 +79,7 @@ def grid5():
     Lastly you could head to the North. It's a distance away but you're pretty sure you can make out a small boat.
     It looks deserted, but in stories deserted things usually aren't because otherwise they wouldn't be there.
     Narratively speaking it's just pointless. Honestly though it could go either way, I've not written it yet.
-    Which way draws your fancy? West to Sweets, East to McCaine or North to a possibly not deserted small boat? """)
+    Which way draws your fancy? West to Sweets, East to McCaine or North to a possibly not deserted small boat?\n """)
     if ans5.upper() == "WEST":
         grid4()
     elif ans5.upper() == "EAST":
@@ -95,7 +95,7 @@ def grid4():
 
 def grid3():
     grid3Visited = True
-    print("Argh! Bears! You're dead! (from bears)")
+    print("Argh! Bears! You're dead! (from bears)\n")
 
 def grid2():
     grid2Visited = True
@@ -112,7 +112,7 @@ def grid1():
     ans1 = raw_input("""You wake up in the sea, what the fuck happened there?!
     Just north of you there's a small golden ocelot hovering above the sea and
     singing a gentle lullaby about gentlemen and their ways.
-    To the east, Anekka Rice begs seagulls for challenges. Which way will you go? """)
+    To the east, Anekka Rice begs seagulls for challenges. Which way will you go?\n """)
     if ans1.upper() == "NORTH":
         grid4()
     elif ans1.upper() == "EAST":
@@ -121,7 +121,7 @@ def grid1():
 if ans.upper() == "YES":
     grid1()
 else:
-    print("okbye i hope snakes eat you")
+    print("okbye i hope snakes eat you\n")
 
 
-print("Thanks for having a play!")
+print("Thanks for having a play!\n")
