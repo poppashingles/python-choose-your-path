@@ -35,6 +35,14 @@ def grid9():
             You had zero evidence of that.\n """)
         elif ans9.upper() == "NO":
             print("Well...yeah, obviously. Why would you murder an old man based on the word of a clearly insane John McCaine? You win!")
+    elif bottle == False and shotgun == True:
+        ans9 = raw_input("""You finally, after literally minutes of this adventure, meet the wizard that John McCaine mentioned back in grid 6.
+        It looks more like a tired old man with a scraggly beard than a wizard though.
+        Well, you have that shotgun from the HMS Sugababes Past. Shoot him with it?\n """)
+        if ans9.upper() == "YES":
+            print("""You've murdered a lost old man. Nice work....just....based on what?! Why would you do that?!\n """)
+        elif ans9.upper() == "NO":
+            print("Well...yeah, obviously. Why would you murder an old man? You win!")
     else:
         ans9 = raw_input("""You meet an old dude, he's just kind of standing there...
         Just leave? I guess? South or West are the only options here...\n """)
@@ -49,13 +57,27 @@ def grid8():
     Might be worth sending Anneka on ahead, she's been singing showtunes and "cleaning" herself like a cat all the way here.
     What do you reckon?\n """)
     if ans8.upper() == "YES":
-        ans8b = raw_input("""You pretend you need to tie your shoelace, which is tricky in the sea and you almost drown in commitment to the lie.
+        print("""You pretend you need to tie your shoelace, which is tricky in the sea and you almost drown in commitment to the lie.
         She swims on ahead while you carry on not-quite-drowning. As you break the surface,
         lungs having achieved a 55% water content and decide that's been long enough, you begin to swim after Anneka who's moved on to a
         Bugsy Malone medley. Then she's harpooned. It's a bit sudden, that's harpooning for you. Then you get harpooned, obviously,
         you weren't far away from a mad woman singing 'We could have been anything that we wanted to be' suuuuuper loudly.\n""")
     elif ans8.upper() == "NO":
-        ans8b = raw_input("""""")
+        ans8b = raw_input("""Probably wise, you set her a challenge of drinking the sea to keep her quiet and start to approach
+        the boat stealthily. You start to climb a ladder at the back and peer over the side, seeing three faces that you recognise...
+        Siobhan Donaghy, Mutya Buena and Keisha Buchanan sit on the deck in the sun, each of them readily armed but they don't notice you.
+        You'd spent years wondering what happened to all of the former sugababes, so that's one mystery solved at least.
+        Anyway, there's a gun within your reach, so if you want to have a go at retiring them permanently, go for it. I'm not sure
+        why you would, but it's been an unusual Saint Lidwina's Day overall so sod it. Fight or run?\n """)
+        global shotgun
+        shotgun = True
+        if ans8b.upper() == "FIGHT":
+            print("""They've spent their years on the sea living well, pirating from the wealthy. Your skills are no match for theirs
+            and though you wing Keisha you go down quickly. Too late you learn the lesson not to fight a pirate
+            former sugababe on her own turf.\n""")
+        elif ans8b.upper() == "RUN":
+            print("Probably wise. You head off East, past Anneka's bloated corpse. Can't fault her commitment to a challenge.")
+            grid9()
 
 
 def grid7():
