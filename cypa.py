@@ -26,7 +26,7 @@ ans = raw_input("Hi Michelle! Yumana play some game? \n")
 #  Grid content
 def grid9():
     grid9Visited = True
-    if bottle == True:
+    if bottle == True and shotgun == False:
         ans9 = raw_input("""You finally, after literally minutes of this adventure, meet the wizard that John McCaine mentioned back in grid 6.
         It looks more like a tired old man with a scraggly beard than a wizard though.
         Well, you have that broken bottle. Stab him with it?\n """)
@@ -45,7 +45,18 @@ def grid9():
 
 def grid8():
     grid8Visited = True
-    
+    ans8 = raw_input("""You draw closer to the boat, it's super spooky and gets super spookier the closer you get.
+    Might be worth sending Anneka on ahead, she's been singing showtunes and "cleaning" herself like a cat all the way here.
+    What do you reckon?\n """)
+    if ans8.upper() == "YES":
+        ans8b = raw_input("""You pretend you need to tie your shoelace, which is tricky in the sea and you almost drown in commitment to the lie.
+        She swims on ahead while you carry on not-quite-drowning. As you break the surface,
+        lungs having achieved a 55% water content and decide that's been long enough, you begin to swim after Anneka who's moved on to a
+        Bugsy Malone medley. Then she's harpooned. It's a bit sudden, that's harpooning for you. Then you get harpooned, obviously,
+        you weren't far away from a mad woman singing 'We could have been anything that we wanted to be' suuuuuper loudly.\n""")
+    elif ans8.upper() == "NO":
+        ans8b = raw_input("""""")
+
 
 def grid7():
     grid7Visited = True
@@ -53,7 +64,7 @@ def grid7():
 
 def grid6():
     grid6Visited = True
-    ans6 = raw_input("""Bless his little cotton socks, it's a big point hat that says 'Oh I'm just the smelliest'.
+    ans6 = raw_input("""Bless his little cotton socks, it's a big pointy hat that says 'Oh I'm just the smelliest'.
     Help him take it off or just laugh at his plight? Nobody will judge you, it's fine. Help or laugh?\n """)
     if ans6.upper() == "HELP":
         print("""You climb up onto the island and take the hat off of his head.
