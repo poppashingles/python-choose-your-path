@@ -9,23 +9,8 @@ bottle = False
 shotgun = False
 
 
-# To check if grid squares have been visited already in order to change messages
-# if they are visited a second time
-grid1Visited = False
-grid2Visited = False
-grid3Visited = False
-grid4Visited = False
-grid5Visited = False
-grid6Visited = False
-grid7Visited = False
-grid8Visited = False
-grid9Visited = False
-
-
 #  Grid content
 def grid9():
-    grid9Visited = True
-
     if bottle == True and shotgun == False:
         ans9 = raw_input("""You finally, after literally minutes of this adventure, meet the wizard that John McCaine mentioned back in grid 6.
         It looks more like a tired old man with a scraggly beard than a wizard though.
@@ -35,6 +20,9 @@ def grid9():
             You had zero evidence of that.\n """)
         elif ans9.upper() == "NO":
             print("Well...yeah, obviously. Why would you murder an old man based on the word of a clearly insane John McCaine? You win!")
+        else:
+            print("Not sure what you've done there but...it's not ok...just have a do-over")
+            grid9()        
 
     elif bottle == False and shotgun == True:
         ans9 = raw_input("""You come across an old man (not like that) standing on a small island with a little coconut tree.
@@ -58,6 +46,9 @@ def grid9():
                 You had zero evidence of that.\n """)
             elif ans9.upper() == "NO":
                 print("Well...yeah, obviously. Why would you murder an old man based on the word of a clearly insane John McCaine? You win!\n ")
+            else:
+                print("Not sure what you've done there but...it's not ok...just have a do-over")
+                grid9()
 
     else:
         ans9 = raw_input("""You meet an old dude, he's just kind of standing there...
@@ -66,10 +57,12 @@ def grid9():
             grid8()
         elif ans9.upper() == "SOUTH":
             grid6()
+        else:
+            print("Not sure what you've done there but...it's not ok...just have a do-over")
+            grid9()
 
 
 def grid8():
-    grid8Visited = True
     ans8 = raw_input("""You draw closer to the boat, it's super spooky and gets super spookier the closer you get.
     Might be worth sending Anneka on ahead, she's been singing showtunes and "cleaning" herself like a cat all the way here.
     What do you reckon?\n """)
@@ -98,17 +91,20 @@ def grid8():
         elif ans8b.upper() == "RUN":
             print("Probably wise. You head off East, past Anneka's bloated corpse. Can't fault her commitment to a challenge.")
             grid9()
+        else:
+            print("Not sure what you've done there but...it's not ok...just have a do-over")
+            grid8()
+
+    else:
+        print("Not sure what you've done there but...it's not ok...just have a do-over")
+        grid8()
 
 
 def grid7():
-    grid7Visited = True
-
     print("You fell off the edge, that was silly. You big silly goose. Also on the way down you're eaten by geese.\n")
 
 
 def grid6():
-    grid6Visited = True
-
     ans6 = raw_input("""Bless his little cotton socks, it's a big pointy hat that says 'Oh I'm just the smelliest'.
     Help him take it off or just laugh at his plight? Nobody will judge you, it's fine. Help or laugh?\n """)
 
@@ -124,11 +120,12 @@ def grid6():
         print("""He looks sad, which makes it funnier.
         You swim off to the north, still giggling away. You sicken me\n """)
         grid9()
+    else:
+        print("Not sure what you've done there but...it's not ok...just have a do-over")
+        grid6()
 
 
 def grid5():
-    grid5Visited = True
-
     ans5 = raw_input("""Hooray! A lack of bears. But you are in the sea (remember? it said earlier). That's not where bears live.
     You curse your damn fool self and take a look about.
     You take a look west. It's that ocelot again, singing away. He might have sweets in his pockets...
@@ -145,25 +142,22 @@ def grid5():
         grid6()
     elif ans5.upper() == "NORTH":
         grid8()
+    else:
+        print("Not sure what you've done there but...it's not ok...just have a do-over")
+        grid5()
 
 
 def grid4():
-    grid4Visited = True
-
     print("""It sings ever so sweetly that you fall asleep and drown.
     That's possible apparently but you might be the first person it's happened to.
     Congratulations on a...I guess, interesting death. See you in Valhalla\n""")
 
 
 def grid3():
-    grid3Visited = True
-
     print("Argh! Bears! You're dead! (from bears)\n")
 
 
 def grid2():
-    grid2Visited = True
-
     ans2 = raw_input("""Anneka sees a fellow adventurer and decides to come along with you
     after a final scream at the seagulls about life insurance premiums.
     You've gained a new companion! She is the worst. North? Maybe bears. I'd try East?\n """)
@@ -172,11 +166,12 @@ def grid2():
         grid5()
     elif ans2.upper() == "EAST":
         grid3()
+    else:
+        print("Not sure what you've done there but...it's not ok...just have a do-over")
+        grid2()
 
 
 def grid1():
-    grid1Visited = True
-
     ans1 = raw_input("""You wake up in the sea, what the fuck happened there?!
     Just north of you there's a small golden ocelot hovering above the sea and
     singing a gentle lullaby about gentlemen and their ways.
@@ -186,6 +181,9 @@ def grid1():
         grid4()
     elif ans1.upper() == "EAST":
         grid2()
+    else:
+        print("Not sure what you've done there but...it's not ok...just have a do-over")
+        grid1()
 
 
 #  Intro
@@ -197,5 +195,5 @@ if ans.upper() == "YES":
 else:
     print("okbye i hope snakes eat you\n")
 
-
+# Closing message when game exits
 print("Thanks for having a play!\n")
